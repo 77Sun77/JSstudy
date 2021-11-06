@@ -1,0 +1,29 @@
+<html>
+    <body> 
+        <style> 
+            .box{ 
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                transition: background-color 2s;
+            } 
+        </style>
+    </body>
+    <body>
+        <script>
+            function load(){ 
+                document.getElementsByClassName("box")[0].style='background-color:green';
+            }
+            window.onload = load;
+            
+        </script>
+        <div class="box" style="background-color: blue"></div>
+        <br>
+        <button id="btn">click</button>
+        <script>
+            document.getElementById('btn').addEventListener('click', function (){
+                document.getElementsByClassName("box")[0].style='background-color:red';
+            });
+        </script>
+    </body>
+</html>

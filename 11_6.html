@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <input id="text1" type="text">
+        <input id="text2" type="text">
+        <button id="btn" onclick="func()">+</button>
+        <script>
+            var g_obj = {"key": "value"};
+            function func() {
+                var t1 = document.getElementById('text1').value;
+                var t2 = document.getElementById('text2').value;
+                g_obj[t1] = t2;
+
+            }
+        </script>
+    </body>
+</html>

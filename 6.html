@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+            .green{
+                background-repeat: green;
+            }
+
+            .blue{
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box" class="box"></div>
+        <br>
+        <button onclick="change('red')">red</button>
+        <button onclick="change('green')">green</button>
+        <button onclick="change('blue')">blue</button>
+        <script>
+            function change(color){
+                if(color == 'red'){
+                    document.getElementById('box').className = "box";
+                } 
+                else if(color == 'green'){
+                    document.getElementById('box').className = "box green";
+                }
+                else if(color == 'blue'){
+                    document.getElementById('box').className = "box blue";
+                }
+            }
+        </script>
+    </body>
+</html>

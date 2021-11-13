@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            .none{
+                background-color: white;
+                color: black;
+            }
+
+            .check{
+                background-color: green;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="btn1" value="1" onclick="change(this)">tab 1</button>
+        <button id="btn2" value="2" onclick="change(this)">tab 2</button>
+        <button id="btn3" value="3" onclick="change(this)">tab 3</button>
+        <div id="tab1" style="display: block;">
+            <h1>This is tab 1!</h1>
+        </div>
+        <div id="tab2" style="display: none;">
+            <h1>This is tab 2!</h1>
+        </div>
+        <div id="tab3" style="display: none;">
+            <h1>This is tab 3!</h1>
+        </div>
+        <script>
+            function change(button){
+                reset();
+                switch(button.value){
+                    case '1':
+                        document.getElementById("tab1").style.display = "block";
+                        document.getElementById("btn1").className = "check";
+                        break;
+                    case '2':
+                        document.getElementById("tab2").style.display = "block";
+                        document.getElementById("btn2").className = "check";
+                        break;
+                    case '3':
+                        document.getElementById("tab3").style.display = "block";
+                        document.getElementById("btn3").className = "check";
+                        break;
+                }
+            }
+            
+            function reset(){
+                document.getElementById("tab1").style.display = "none";
+                document.getElementById("tab2").style.display = "none";
+                document.getElementById("tab3").style.display = "none";
+                document.getElementById("btn1").className = "none";
+                document.getElementById("btn2").className = "none";
+                document.getElementById("btn3").className = "none";
+            }
+        </script>
+    </body>
+</html>

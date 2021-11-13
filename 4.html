@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <button onclick="imageDown()">&lt;</button>
+        <button onclick="imageUp()">&gt;</button>
+        <br>
+        <img id="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs_IjpoPNMZ4jpDtqzJYy_HJFHzDTPImz85A&usqp=CAU">
+    <script>
+        var images=[];
+        images[0] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs_IjpoPNMZ4jpDtqzJYy_HJFHzDTPImz85A&usqp=CAU";
+        images[1] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP7VqK1sQ605QcqKqlJJlpWEvYThSv-f6PmQ&usqp=CAU";
+        images[2] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8R0_h5pSmLZUeFiLAJ90TMXVG_ijZ1YqX_A&usqp=CAU";
+        var num=0;
+        function imageUp(){
+            num++;
+            if(num>2) num=2;
+            imageChange();
+        }
+        function imageDown(){
+            num--;
+            if(num<0) num=0;
+            imageChange();
+        }
+
+        function imageChange(){
+            document.getElementById('image').src = images[num];
+        }
+    </script>
+</html>
